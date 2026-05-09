@@ -96,3 +96,24 @@ with col2:
             st.download_button("📥 Pobierz Plan (CSV)", df.to_csv().encode('utf-8'), "plan.csv")
         else:
             st.error("Nie znaleziono poprawnych wymiarów w nazwach plików.")
+            # --- NOWA SEKCJA W SIDEBARZE ---
+st.sidebar.divider()
+st.sidebar.subheader("🎯 Prace uzupełniające (Fillery)")
+filler_name = st.sidebar.text_input("Nazwa wypełniacza", "Naklejka_Logo")
+filler_w = st.sidebar.number_input("Szerokość fillera (cm)", value=20)
+filler_h = st.sidebar.number_input("Wysokość fillera (cm)", value=20)
+
+# --- ZAKTUALIZOWANA LOGIKA W PĘTLI OBLICZENIOWEJ ---
+# (Wewnątrz funkcji przelicz_zlecenia)
+
+# Obliczamy wolne miejsce na szerokości rolki
+wolna_szerokosc = rolka - szer_brytu
+
+if wolna_szerokosc >= filler_w:
+    # Ile sztuk fillera zmieści się obok głównej pracy na całej długości?
+    sztuk_w_rzedzie = math.floor(wolna_szerokosc / (filler_w + 1)) # +1cm odstępu
+    rzędów = math.floor(dlug_n / (filler_h + 1))
+    max_fillerow = sztuk_w_rzedzie * rzędów * sztuki
+    sugestia_fillera = f"Możesz dołożyć {max_fillerow} szt. ({filler_name})"
+else:
+    sugestia_fillera = "Brak miejsca"
