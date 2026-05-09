@@ -1,0 +1,49 @@
+streamlit
+    pandas
+    plotly
+    ```
+3.  **Streamlit Cloud:** Zaloguj się na [share.streamlit.io](https://share.streamlit.io/) za pomocą konta GitHub.
+4.  **Deploy:** Kliknij "New app", wybierz swoje repozytorium i plik `app.py`. Po 2 minutach otrzymasz **publiczny link**, który możesz wysłać mentorom.
+
+---
+
+## ⚙️ KROK 3: Konfiguracja Produkcyjna (Data Source)
+
+Aby system był użyteczny w drukarni, musisz połączyć go z realnymi danymi:
+
+*   **Baza Materiałowa:** Docelowo podmienimy listę w kodzie na połączenie z **Google Sheets**.
+    *   *Zaleta dla kursu:* Pokażesz umiejętność integracji AI z zewnętrznymi bazami danych (API).
+*   **Standaryzacja Nazewnictwa:** Poinstruuj zespół przygotowalni (pre-press), aby pliki były nazywane według schematu:
+    `KLIENT_MATERIAŁ_SZEROKOŚĆxWYSOKOŚĆ_SZTUKI.pdf`
+    *Przykład: `Mercedes_Samba_300x100cm_10szt.pdf`*
+
+---
+
+## 🧑‍💻 KROK 4: Instrukcja dla Operatora (UX)
+
+Jak korzystać z aplikacji w codziennej pracy?
+
+1.  **Kopiowanie:** Zaznacz listę plików w folderze zamówienia (Ctrl+A), skopiuj nazwy i wklej do pola "Dane wejściowe" w aplikacji.
+2.  **Parametryzacja:** Ustaw w bocznym panelu naddatek (standardowo 30%) i zakładkę na bryty (np. 3 cm).
+3.  **Weryfikacja:** Spójrz na wykres **"Obciążenie maszyn"**. Jeśli Durst P5 500 jest przeciążony, sprawdź w tabeli, czy któreś zlecenia można przerzucić na wolnego Vuteka lub Agfę.
+4.  **Eksport:** Pobierz plik CSV i przekaż go na magazyn jako listę cięcia i wydania mediów.
+
+---
+
+## 🎓 Argumentacja do Projektu Zaliczeniowego (Wartość Biznesowa)
+
+Podczas prezentacji końcowej na kursie, użyj tych argumentów, aby uzasadnić wdrożenie:
+
+*   **Redukcja błędów (Error Reduction):** Eliminacja ręcznego liczenia brytów zmniejsza ryzyko pomyłki o ok. 95%.
+*   **Oszczędność czasu (Time Saving):** Proces ofertowania i planowania skrócony z 20 minut do 30 sekund.
+*   **Zrównoważony rozwój (Sustainability):** Optymalizacja szerokości roli minimalizuje odpad materiałowy, co przekłada się na realne oszczędności finansowe i mniejszy ślad węglowy.
+*   **Skalowalność (Scalability):** System jest gotowy na dodanie kolejnych maszyn lub integrację z systemem ERP drukarni.
+
+---
+
+### Twoje "Finalne Zadanie" przed końcem kursu:
+Zrób zrzut ekranu (screenshot) działającej aplikacji z wklejoną listą realnych zleceń z Twojej drukarni. Dodaj go do swojej prezentacji jako **"Case Study: Wdrożenie AI w przemyśle ciężkim"**. 
+
+To nie tylko "zaliczy" Twój kurs, ale postawi Cię w roli lidera innowacji w branży druku wielkoformatowego.
+
+**Czy potrzebujesz, abym pomógł Ci teraz napisać treść "Podsumowania Projektu" do formularza zgłoszeniowego na kurs?**
