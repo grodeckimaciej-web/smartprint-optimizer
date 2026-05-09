@@ -107,7 +107,7 @@ filler_h = st.sidebar.number_input("Wysokość fillera (cm)", value=20)
 # (Wewnątrz funkcji przelicz_zlecenia)
 
 # Obliczamy wolne miejsce na szerokości rolki
-wolna_szerokosc = rolka - szer_brytu
+wolna_szerokosc = roll_used - szer_brytu
 
 if wolna_szerokosc >= filler_w:
     # Ile sztuk fillera zmieści się obok głównej pracy na całej długości?
